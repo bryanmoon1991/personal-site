@@ -10,11 +10,6 @@ type ButtonProps = {
 const NavBarButton: FunctionComponent<ButtonProps> = ({ innerText, link }) => {
 	const { colorMode } = useColorMode();
 
-	const bgColor = {
-		light: 'white',
-		dark: '#171717',
-	};
-
 	const navHoverBg = {
 		light: 'gray.600',
 		dark: 'gray.300',
