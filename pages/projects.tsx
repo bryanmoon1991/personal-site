@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
 
-const ProjectsPage: React.FunctionComponent = () => (
-  <Layout title="Projects | Next.js + TypeScript Example">
+const Portfolio: React.FunctionComponent = () => (
+  <Layout title='Portfolio'>
     <h1>Projects</h1>
     <p>Here are My Projects</p>
     <p>
@@ -13,4 +13,4 @@ const ProjectsPage: React.FunctionComponent = () => (
   </Layout>
 )
 
-export default ProjectsPage 
+export default Portfolio 
