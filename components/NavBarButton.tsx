@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { useColorMode, Button, Box } from '@chakra-ui/react';
+import { navHoverBg } from '../styles/navColors';
 
 type ButtonProps = {
 	innerText: string;
@@ -9,11 +10,6 @@ type ButtonProps = {
 
 const NavBarButton: FunctionComponent<ButtonProps> = ({ innerText, link }) => {
 	const { colorMode } = useColorMode();
-
-	const navHoverBg = {
-		light: 'gray.600',
-		dark: 'gray.300',
-	};
 
 	return (
 		<Box>

@@ -3,8 +3,9 @@ import DarkModeSwitch from '../components/DarkModeSwitch';
 import NavBarButton from '../components/NavBarButton';
 import { Flex, useColorMode } from '@chakra-ui/react';
 import styled from '@emotion/styled';
+import { bgColor } from '../styles/navColors';
 
-const NavBar: FunctionComponent = ({ children }) => {
+const NavBar: FunctionComponent = () => {
 	const { colorMode } = useColorMode();
 
 	const StickyNav = styled(Flex)`
@@ -15,14 +16,23 @@ const NavBar: FunctionComponent = ({ children }) => {
 		transition: height 0.5s, line-height 0.5s;
 	`;
 
-	const bgColor = {
-		light: 'white',
-		dark: '#171717',
-	};
-
 	return (
 		<>
-			<StickyNav>
+			<StickyNav
+				flexDirection="row"
+				justifyContent="space-between"
+				alignItems="center"
+				maxWidth="800px"
+				minWidth="350px"
+				width="100%"
+				bg={bgColor[colorMode]}
+				as="nav"
+				px={[2, 6, 4]}
+				py={2}
+				mt={8}
+				mb={[0, 0, 8]}
+				mx="auto"
+			>
 				<NavBarButton link="/" innerText="Home" />
 				<NavBarButton link="/about" innerText="About" />
 				<NavBarButton link="/projects" innerText="Projects" />
@@ -32,17 +42,6 @@ const NavBar: FunctionComponent = ({ children }) => {
 				/>
 				<DarkModeSwitch />
 			</StickyNav>
-			<Flex
-				as="main"
-				justifyContent="center"
-				flexDirection="column"
-				bg={bgColor[colorMode]}
-				color={bgColor[colorMode]}
-				px={[0, 4, 4]}
-				mt={[4, 8, 8]}
-			>
-				{children}
-			</Flex>
 		</>
 	);
 };
