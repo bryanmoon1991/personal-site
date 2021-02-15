@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^1.3.3",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
+    "devicon": "^2.2.0",
     "framer-motion": "^3.3.0",
     "next": "latest",
     "next-google-fonts": "^1.2.1",
