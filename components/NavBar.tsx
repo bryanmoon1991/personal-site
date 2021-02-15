@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import DarkModeSwitch from '../components/DarkModeSwitch';
 import NavBarButton from '../components/NavBarButton';
-import { Flex, useColorMode } from '@chakra-ui/react';
+import { Flex, Box, useColorMode } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { bgColor } from '../styles/navColors';
 
@@ -10,7 +10,7 @@ const NavBar: FunctionComponent = () => {
 
 	const StickyNav = styled(Flex)`
 		position: sticky;
-		z-index: 10;
+		z-index: 4;
 		top: 0;
 		backdrop-filter: saturate(100%) blur(20px);
 		transition: height 0.5s, line-height 0.5s;
@@ -33,13 +33,14 @@ const NavBar: FunctionComponent = () => {
 				mb={[0, 0, 8]}
 				mx="auto"
 			>
-				<NavBarButton link="/" innerText="Home" />
-				<NavBarButton link="/about" innerText="About" />
-				<NavBarButton link="/projects" innerText="Projects" />
-				<NavBarButton
-					link="https://medium.com/@bryanmoon1991"
-					innerText="Blog"
-				/>
+				<Box>
+					<NavBarButton link="/" innerText="Home" />
+					<NavBarButton link="/projects" innerText="Projects" />
+					<NavBarButton
+						link="https://medium.com/@bryanmoon1991"
+						innerText="Blog"
+					/>
+				</Box>
 				<DarkModeSwitch />
 			</StickyNav>
 		</>

@@ -33,6 +33,9 @@ const GlobalStyle: FunctionComponent = ({ children }) => {
 						min-height: 100vh;
 						background: ${colorMode === 'light' ? 'white' : '#171717'};
 					}
+					.profile-pic {
+						border-radius: 50%;
+					}
 				`}
 			/>
 			{children}

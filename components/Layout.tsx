@@ -33,10 +33,10 @@ const Layout: FunctionComponent<Props> = ({ children, title }) => {
 			>
 				{children}
 			</Flex>
-			<footer>
+			{/* <Footer>
 				<hr />
 				<span>I'm here to stay (Footer)</span>
-			</footer>
+			</Footer> */}
 		</div>
 	);
 };
