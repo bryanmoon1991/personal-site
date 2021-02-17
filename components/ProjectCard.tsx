@@ -28,6 +28,7 @@ export const ProjectCard = ({
 				borderRadius="lg"
 				overflow="hidden"
 				justifySelf="center"
+				p="10"
 			>
 				<AspectRatio>
 					<Box as="iframe" src={srcLink} />
