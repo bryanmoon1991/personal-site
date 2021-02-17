@@ -1,11 +1,10 @@
-import { Flex } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 import { ProjectCard } from '../components/ProjectCard';
 import Layout from '../components/Layout';
 
 const Portfolio: React.FunctionComponent = () => (
 	<Layout title="Portfolio">
-		{' '}
-		<Flex justifyItems="center">
+		<VStack w="100%" spacing="8rem">
 			<ProjectCard
 				srcLink="https://www.youtube.com/embed/50RBJrqYr2c"
 				title="Perfect Playlist"
@@ -20,12 +19,12 @@ const Portfolio: React.FunctionComponent = () => (
 				tech={['Ruby on Rails', 'React', 'Postgresql']}
 			/>
 			<ProjectCard
-				srcLink="./bryan.jpg"
+				srcLink="./restroom-locator.png"
 				title="NYC Public Restroom Locator"
 				description="Web app for locating public restrooms in NYC. Seeded with NYC open data API, users are able to filter results by borough, neighborhood, or geolocation"
 				tech={['Ruby on Rails', 'Vanilla JS', 'CSS']}
 			/>
-		</Flex>
+		</VStack>
 	</Layout>
 );
 

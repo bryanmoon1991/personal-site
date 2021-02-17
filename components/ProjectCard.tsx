@@ -22,10 +22,15 @@ export const ProjectCard = ({
 
 	return (
 		<>
-			{' '}
-			<Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+			<Box
+				w={['md', 'xl', '2xl']}
+				borderWidth="1px"
+				borderRadius="lg"
+				overflow="hidden"
+				justifySelf="center"
+			>
 				<AspectRatio>
-					<iframe src={srcLink} />
+					<Box as="iframe" src={srcLink} />
 				</AspectRatio>
 
 				<Box
@@ -38,13 +43,11 @@ export const ProjectCard = ({
 				>
 					{title}
 				</Box>
-				<Box as="p" p="6" fontSize="sm">
+				<Box as="p" ml="6" mr="6" fontSize="sm">
 					{description}
 				</Box>
 				<Box p="6">
-					<Box d="" alignItems="baseline">
-						{badgeMap}
-					</Box>
+					<Box alignItems="baseline">{badgeMap}</Box>
 				</Box>
 			</Box>
 		</>
