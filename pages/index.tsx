@@ -10,7 +10,9 @@ import {
 	Stack,
 	Box,
 	Image,
+	Button,
 } from '@chakra-ui/react';
+import { EmailIcon } from '@chakra-ui/icons';
 
 import { IconsComponent } from '../components/IconsComponent';
 
@@ -51,6 +53,16 @@ const IndexPage: FunctionComponent = () => {
 						the stack.
 					</Text>
 					<IconsComponent />
+					<Button
+						as="a"
+						href="mailto: bryanmoon1991@gmail.com"
+						leftIcon={<EmailIcon />}
+						mt={20}
+						colorScheme="teal"
+						variant="solid"
+					>
+						Get in touch!
+					</Button>
 				</Flex>
 			</Stack>
 		</Layout>

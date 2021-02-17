@@ -35,7 +35,11 @@ const NavBar: FunctionComponent = () => {
 			>
 				<Box>
 					<NavBarButton link="/" innerText="Home" />
+				</Box>
+				<Box>
 					<NavBarButton link="/projects" innerText="Projects" />
+				</Box>
+				<Box>
 					<NavBarButton
 						link="https://medium.com/@bryanmoon1991"
 						innerText="Blog"
