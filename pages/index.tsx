@@ -11,8 +11,9 @@ import {
 	Box,
 	Image,
 	Button,
+	HStack,
 } from '@chakra-ui/react';
-import { EmailIcon } from '@chakra-ui/icons';
+import { EmailIcon, DownloadIcon } from '@chakra-ui/icons';
 
 import { IconsComponent } from '../components/IconsComponent';
 
@@ -50,19 +51,47 @@ const IndexPage: FunctionComponent = () => {
 					</Flex>
 					<Text color={colorSecondary[colorMode]} mb={10}>
 						I am a software engineer based in Queens, NY with experience across
-						the stack.
+						the stack. I'm very curious and I love learning.
 					</Text>
 					<IconsComponent />
-					<Button
-						as="a"
-						href="mailto: bryanmoon1991@gmail.com"
-						leftIcon={<EmailIcon />}
-						mt={20}
-						colorScheme="teal"
-						variant="solid"
+					<HStack
+						alignItems="baseline"
+						alignContent="space-between"
+						spacing={5}
 					>
-						Get in touch!
-					</Button>
+						<Button
+							as="a"
+							href="mailto: bryanmoon1991@gmail.com"
+							leftIcon={<EmailIcon />}
+							mt={20}
+							colorScheme="teal"
+							variant="solid"
+						>
+							Email Me!
+						</Button>
+						<Button
+							as="a"
+							href="./bryan-moon-resume.pdf"
+							download
+							leftIcon={<DownloadIcon />}
+							mt={20}
+							colorScheme="teal"
+							variant="solid"
+						>
+							Resume
+						</Button>
+						{/* <Button
+							as="a"
+							href="./bryan-moon-resume.pdf"
+							download
+							leftIcon={<DownloadIcon />}
+							mt={20}
+							colorScheme="teal"
+							variant="solid"
+						>
+							Chess
+						</Button> */}
+					</HStack>
 				</Flex>
 			</Stack>
 		</Layout>
