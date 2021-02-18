@@ -1,17 +1,62 @@
-import { VStack } from '@chakra-ui/react';
+import {
+	VStack,
+	HStack,
+	Box,
+	List,
+	ListIcon,
+	ListItem,
+	Text,
+} from '@chakra-ui/react';
+import {
+	CheckCircleIcon,
+	SettingsIcon,
+	WarningTwoIcon,
+} from '@chakra-ui/icons';
 import { ProjectCard } from '../components/ProjectCard';
 import Layout from '../components/Layout';
 
 const Portfolio: React.FunctionComponent = () => (
 	<Layout title="Portfolio">
 		<VStack w="100%" spacing="8rem">
-			<ProjectCard
-				srcLink="https://www.youtube.com/embed/50RBJrqYr2c"
-				title="Perfect Playlist"
-				description="A web app that allows users some more control over how playlists are
+			<HStack>
+				<ProjectCard
+					srcLink="https://www.youtube.com/embed/50RBJrqYr2c"
+					title="Perfect Playlist"
+					description="A web app that allows users some more control over how playlists are
 					generated and enables quick discovery of new music."
-				tech={['Ruby on Rails', 'React', 'Redux', 'Postgresql', 'Semantic UI']}
-			/>
+					tech={[
+						'Ruby on Rails',
+						'React',
+						'Redux',
+						'Postgresql',
+						'Semantic UI',
+					]}
+				/>
+				<Box>
+					<List spacing={3}>
+						<ListItem as="h4">
+							<ListIcon as={WarningTwoIcon} color="red.500" />
+							<strong>Problems I Encountered</strong>
+						</ListItem>
+						<ListItem>
+							<Text>
+								&bull; Tokens provided to users expire every 30 minutes
+							</Text>
+						</ListItem>
+						<ListItem as="h4">
+							<ListIcon as={CheckCircleIcon} color="green.500" />
+							<strong>My Solutions</strong>
+						</ListItem>
+						<ListItem>
+							<Text>
+								&bull; I built a method that was called in the catch blocks of
+								my API requests so that if a call had failed, I could refresh
+								the token without disturbing the user's experience.
+							</Text>
+						</ListItem>
+					</List>
+				</Box>
+			</HStack>
 			<ProjectCard
 				srcLink="https://www.youtube.com/embed/C7_uNyuBLs8"
 				title="Haiku Twitter"
