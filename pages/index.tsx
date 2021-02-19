@@ -37,28 +37,14 @@ const IndexPage: FunctionComponent = () => {
 					alignItems="flex-start"
 					maxWidth="1000px"
 				>
-					<Flex align="center" mb={5}>
-						<Box boxSize={[150, 190, 230]} mr={10}>
-							<Image src="/bryan.jpg" alt="your latest hire" rounded="50%" />
-						</Box>
-						<Spacer />
-						<Box>
-							<Stack>
-								<Heading>Hello.</Heading>
-								<Heading>I'm Bryan Moon🧑‍💻</Heading>
-							</Stack>
-						</Box>
-					</Flex>
+					<Heading>Hello.</Heading>
+					<Heading mb={5}>I'm Bryan Moon 🧑‍💻</Heading>
 					<Text color={colorSecondary[colorMode]} mb={10}>
 						I am a software engineer based in Queens, NY with experience across
-						the stack. I'm very curious and I love learning.
+						the stack.
 					</Text>
 					<IconsComponent />
-					<HStack
-						alignItems="baseline"
-						alignContent="space-between"
-						spacing={5}
-					>
+					<Flex alignItems="baseline" alignContent="space-around">
 						<Button
 							as="a"
 							href="mailto: bryanmoon1991@gmail.com"
@@ -69,6 +55,7 @@ const IndexPage: FunctionComponent = () => {
 						>
 							Email Me!
 						</Button>
+						<Spacer />
 						<Button
 							as="a"
 							href="./bryan-moon-resume.pdf"
@@ -80,18 +67,7 @@ const IndexPage: FunctionComponent = () => {
 						>
 							Resume
 						</Button>
-						{/* <Button
-							as="a"
-							href="./bryan-moon-resume.pdf"
-							download
-							leftIcon={<DownloadIcon />}
-							mt={20}
-							colorScheme="teal"
-							variant="solid"
-						>
-							Chess
-						</Button> */}
-					</HStack>
+					</Flex>
 				</Flex>
 			</Stack>
 		</Layout>

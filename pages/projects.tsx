@@ -7,11 +7,7 @@ import {
 	ListItem,
 	Text,
 } from '@chakra-ui/react';
-import {
-	CheckCircleIcon,
-	SettingsIcon,
-	WarningTwoIcon,
-} from '@chakra-ui/icons';
+import { CheckCircleIcon, WarningTwoIcon } from '@chakra-ui/icons';
 import { ProjectCard } from '../components/ProjectCard';
 import Layout from '../components/Layout';
 
