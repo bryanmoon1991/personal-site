@@ -30,6 +30,8 @@ const Portfolio: React.FunctionComponent = () => (
 						'Postgresql',
 						'Semantic UI',
 					]}
+					gitLink="https://github.com/bryanmoon1991/playlister-frontend"
+					externalLink="google.com"
 				/>
 				<Box justifySelf="center" p="3" m="8">
 					<List spacing={3}>
@@ -82,12 +84,14 @@ const Portfolio: React.FunctionComponent = () => (
 				title="Haiku Twitter"
 				description="Twitter clone except users are only allowed to tweet haikus"
 				tech={['Ruby on Rails', 'React', 'Postgresql']}
+				gitLink="https://github.com/bryanmoon1991/haiku-twitter-frontend"
 			/>
 			<ProjectCard
 				srcLink="./restroom-locator.png"
 				title="NYC Public Restroom Locator"
 				description="Web app for locating public restrooms in NYC. Seeded with NYC open data API, users are able to filter results by borough, neighborhood, or geolocation"
 				tech={['Ruby on Rails', 'Vanilla JS', 'CSS']}
+				gitLink="https://github.com/bryanmoon1991/nyc-toilet-locator-frontend"
 			/>
 		</VStack>
 	</Layout>
