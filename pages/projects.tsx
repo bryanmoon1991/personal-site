@@ -1,6 +1,6 @@
 import {
 	VStack,
-	HStack,
+	Flex,
 	Box,
 	List,
 	ListIcon,
@@ -18,7 +18,10 @@ import Layout from '../components/Layout';
 const Portfolio: React.FunctionComponent = () => (
 	<Layout title="Portfolio">
 		<VStack w="100%" spacing="8rem">
-			<HStack>
+			<Flex
+				direction={['column', 'column', 'row', 'row']}
+				justifyContent="center"
+			>
 				<ProjectCard
 					srcLink="https://www.youtube.com/embed/50RBJrqYr2c"
 					title="Perfect Playlist"
@@ -32,9 +35,9 @@ const Portfolio: React.FunctionComponent = () => (
 						'Semantic UI',
 					]}
 				/>
-				<Box>
+				<Box justifySelf="center" p="3" m="8">
 					<List spacing={3}>
-						<ListItem as="h4">
+						<ListItem as="h2">
 							<ListIcon as={WarningTwoIcon} color="red.500" />
 							<strong>Problems I Encountered</strong>
 						</ListItem>
@@ -51,7 +54,7 @@ const Portfolio: React.FunctionComponent = () => (
 								'Various Artists' along with a corresponding id
 							</Text>
 						</ListItem>
-						<ListItem as="h4">
+						<ListItem as="h2">
 							<ListIcon as={CheckCircleIcon} color="green.500" />
 							<strong>My Solutions</strong>
 						</ListItem>
@@ -77,7 +80,7 @@ const Portfolio: React.FunctionComponent = () => (
 						</ListItem>
 					</List>
 				</Box>
-			</HStack>
+			</Flex>
 			<ProjectCard
 				srcLink="https://www.youtube.com/embed/C7_uNyuBLs8"
 				title="Haiku Twitter"

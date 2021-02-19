@@ -23,12 +23,13 @@ export const ProjectCard = ({
 	return (
 		<>
 			<Box
-				w={['md', 'xl', '2xl']}
+				w={['xs', 'sm', 'md', 'xl', '2xl']}
 				borderWidth="1px"
 				borderRadius="lg"
 				overflow="hidden"
 				justifySelf="center"
 				p="3"
+				m="8"
 			>
 				<AspectRatio>
 					<Box as="iframe" src={srcLink} />
