@@ -8,10 +8,7 @@ import {
 	Flex,
 	Spacer,
 	Stack,
-	Box,
-	Image,
 	Button,
-	HStack,
 } from '@chakra-ui/react';
 import { EmailIcon, DownloadIcon } from '@chakra-ui/icons';
 
