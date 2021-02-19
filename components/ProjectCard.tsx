@@ -7,6 +7,7 @@ import {
 	Flex,
 	Spacer,
 	Tooltip,
+	Image,
 } from '@chakra-ui/react';
 import { Github } from '@styled-icons/simple-icons';
 import { useColorMode } from '@chakra-ui/react';
@@ -48,9 +49,13 @@ export const ProjectCard = ({
 				p="3"
 				m="8"
 			>
-				<AspectRatio>
-					<Box as="iframe" src={srcLink} />
-				</AspectRatio>
+				{srcLink.charAt(0) === '.' ? (
+					<Image src={srcLink} />
+				) : (
+					<AspectRatio>
+						<Box as="iframe" src={srcLink} />
+					</AspectRatio>
+				)}
 
 				<Box
 					mt="1"

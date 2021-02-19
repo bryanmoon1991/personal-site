@@ -44,8 +44,9 @@ const IndexPage: FunctionComponent = () => {
 						the stack.
 					</Text>
 					<IconsComponent />
-					<Flex alignItems="baseline" alignContent="space-around">
+					<Flex w="100%">
 						<Button
+							size="md"
 							as="a"
 							href="mailto: bryanmoon1991@gmail.com"
 							leftIcon={<EmailIcon />}
@@ -57,6 +58,7 @@ const IndexPage: FunctionComponent = () => {
 						</Button>
 						<Spacer />
 						<Button
+							size="md"
 							as="a"
 							href="./bryan-moon-resume.pdf"
 							download
