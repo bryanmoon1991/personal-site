@@ -99,15 +99,12 @@ const Portfolio: React.FunctionComponent = () => (
 						</ListItem>
 						<ListItem>
 							<Text maxWidth="sm">
-								&bull; Tokens provided to users expire every 30 minutes
+								&bull; Efficiently serializing the data that gets sent to the
+								frontend
 							</Text>
 							<Text maxWidth="sm">
-								&bull; Results from API calls that exceed a certain number are
-								sent with an endpoint for the 'next page' of results
-							</Text>
-							<Text maxWidth="sm">
-								&bull; The 'artist' field for compilation albums are labeled as
-								'Various Artists' along with a corresponding id
+								&bull; Creating an infinite scroll feature without paginated
+								responses from the backend API
 							</Text>
 						</ListItem>
 						<ListItem as="h2">
@@ -116,22 +113,26 @@ const Portfolio: React.FunctionComponent = () => (
 						</ListItem>
 						<ListItem>
 							<Text maxWidth="sm">
-								&bull; I built a function that was called in the catch blocks of
-								my API requests so that if a call had failed, I could refresh
-								the token without disturbing the user's experience.
+								&bull; It was important to create two different serializers for
+								the User model so that I could either send all of a users
+								metadata, or only the necessary metadata. The frontend would
+								need all of the metadata of only one user at a time while the
+								app was focused on that particular user's profile page. While my
+								app was small and only seeded with a couple hundred users, I
+								realized that if I was working with a large number of users I
+								would have to be mindful of how the data was being serialized
+								and which pieces metadata was necessary for a view to render.
 							</Text>
 							<Text maxWidth="sm">
-								&bull; I set state with the initial results of the API call and
-								as the first few results would render, a function that checks if
-								there were more results would run asynchronously and continue to
-								update the piece of state that held its preceding data.
-							</Text>
-							<Text maxWidth="sm">
-								&bull; Compilations were one of my main edgecases I had to test
-								against. For these items, I had to scan each track and extract
-								the id's of each artist that appeared on the album. Using these
-								ids I was able to create a component that accurately displayed
-								the artists that appear on the item.
+								&bull; While creating an infinite scroll feature was not
+								necessary for the app to work, I wanted to include it as a
+								feature to emulate the experience of using Twitter. An infinite
+								scroll would usually require paginated responses from an API but
+								I was able to mimic the effect by setting state with the next 10
+								results once the user reached the end of the page. This of
+								course defeats the purpose being that an infinite scroll is
+								supposed to help manage the amount of data is rendered, but it
+								was fun to come up with a way to mimic this effect.
 							</Text>
 						</ListItem>
 					</List>
