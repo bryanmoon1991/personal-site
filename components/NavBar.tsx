@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import DarkModeSwitch from '../components/DarkModeSwitch';
 import NavBarButton from '../components/NavBarButton';
-import { Flex, Box, useColorMode } from '@chakra-ui/react';
+import { Flex, Box, Tooltip, useColorMode } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { bgColor } from '../styles/navColors';
 

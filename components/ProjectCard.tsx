@@ -6,13 +6,9 @@ import {
 	Link,
 	Flex,
 	Spacer,
-	Tooltip,
 	Image,
 	Heading,
 } from '@chakra-ui/react';
-import { Github } from '@styled-icons/simple-icons';
-import { useColorMode } from '@chakra-ui/react';
-import { ExternalLinkOutline } from '@styled-icons/evaicons-outline';
 
 interface CardProps {
 	srcLink: string;
@@ -31,8 +27,6 @@ export const ProjectCard = ({
 	gitLink,
 	externalLink,
 }: CardProps) => {
-	const { colorMode } = useColorMode();
-
 	const badgeMap = tech.map((t) => (
 		<Badge borderRadius="full" mx="1" px="2" colorScheme="blue" key={t}>
 			{t}
@@ -48,12 +42,9 @@ export const ProjectCard = ({
 				overflow="hidden"
 				justifySelf="center"
 				p="3"
-				m="8"
+				m="4"
 			>
-				{/* <Box p="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-					{title}
-				</Box> */}
-				<Heading>{title}</Heading>
+				<Heading size="lg">{title}</Heading>
 				{srcLink.charAt(0) === '.' ? (
 					<Image src={srcLink} />
 				) : (
