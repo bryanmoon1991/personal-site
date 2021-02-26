@@ -8,6 +8,7 @@ import {
 	Spacer,
 	Tooltip,
 	Image,
+	Heading,
 } from '@chakra-ui/react';
 import { Github } from '@styled-icons/simple-icons';
 import { useColorMode } from '@chakra-ui/react';
@@ -33,7 +34,7 @@ export const ProjectCard = ({
 	const { colorMode } = useColorMode();
 
 	const badgeMap = tech.map((t) => (
-		<Badge borderRadius="full" px="2" colorScheme="blue">
+		<Badge borderRadius="full" mx="1" px="2" colorScheme="blue" key={t}>
 			{t}
 		</Badge>
 	));
@@ -49,6 +50,10 @@ export const ProjectCard = ({
 				p="3"
 				m="8"
 			>
+				{/* <Box p="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
+					{title}
+				</Box> */}
+				<Heading>{title}</Heading>
 				{srcLink.charAt(0) === '.' ? (
 					<Image src={srcLink} />
 				) : (
@@ -57,51 +62,29 @@ export const ProjectCard = ({
 					</AspectRatio>
 				)}
 
-				<Box
-					mt="1"
-					p="6"
-					fontWeight="semibold"
-					as="h4"
-					lineHeight="tight"
-					isTruncated
-				>
-					{title}
-				</Box>
-				<Box as="p" ml="6" mr="6" fontSize="sm">
+				<Box as="p" m="6">
 					{description}
 				</Box>
-				<Box p="6">
+				<Box ml="6" mr="6">
 					<Box alignItems="baseline">{badgeMap}</Box>
 				</Box>
 				<Flex p="6">
 					<Spacer />
-					<Box>
+					<Box pl="1" pr="1">
 						<Link href={gitLink} target="_blank">
-							<Tooltip hasArrow label="Github" bg="gray.300" color="black">
-								<Github
-									size="30"
-									fill={colorMode === 'dark' ? 'white' : 'black'}
-								/>
-							</Tooltip>
+							<strong>Github</strong>
 						</Link>
 					</Box>
 
 					{externalLink ? (
-						<Box>
-							<Link href={externalLink} target="_blank">
-								<Tooltip
-									hasArrow
-									label="Deployed Version"
-									bg="gray.300"
-									color="black"
-								>
-									<ExternalLinkOutline
-										size="33"
-										color={colorMode === 'dark' ? 'white' : 'black'}
-									/>
-								</Tooltip>
-							</Link>
-						</Box>
+						<>
+							{'|'}
+							<Box pl="1" pr="1">
+								<Link href={externalLink} target="_blank">
+									<strong>Deployed Version</strong>
+								</Link>
+							</Box>
+						</>
 					) : undefined}
 				</Flex>
 			</Box>
