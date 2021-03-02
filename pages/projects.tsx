@@ -15,6 +15,7 @@ import {
 	ListIcon,
 	ListItem,
 	Text,
+	Heading,
 } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
 import { useState } from 'react';
@@ -30,14 +31,17 @@ const Portfolio: React.FunctionComponent = () => {
 		onOpen();
 	};
 	return (
-		<Layout title="Portfolio">
+		<Layout title="Projects">
+			<Flex justifyContent="center">
+				<Heading>Past Projects</Heading>
+			</Flex>
 			<VStack w="100%" spacing="8rem">
 				<Flex
 					direction={['column', 'column', 'row', 'row']}
 					justifyContent="center"
 				>
 					<ProjectCard
-						srcLink="https://www.youtube.com/embed/50RBJrqYr2c"
+						srcLink="https://www.youtube.com/embed/50RBJrqYr2c?rel=0;controls=0;showinfo=0"
 						title="Perfect Playlist"
 						description="A web app that allows users some more control over how playlists are
 					generated and enables quick discovery of new music."
@@ -47,6 +51,7 @@ const Portfolio: React.FunctionComponent = () => {
 							'Redux',
 							'Postgresql',
 							'Semantic UI',
+							'Spotify API',
 						]}
 						gitLink="https://github.com/bryanmoon1991/playlister-frontend"
 						externalLink="google.com"
@@ -55,7 +60,7 @@ const Portfolio: React.FunctionComponent = () => {
 						<List spacing={3}>
 							<ListItem as="h2">
 								<ListIcon as={WarningTwoIcon} color="red.500" />
-								<strong>Problems I Encountered</strong>
+								<strong>Challenges Encountered</strong>
 							</ListItem>
 							<ListItem>
 								<Text maxWidth="sm">
@@ -72,7 +77,7 @@ const Portfolio: React.FunctionComponent = () => {
 							</ListItem>
 							<ListItem as="h2">
 								<ListIcon as={CheckCircleIcon} color="green.500" />
-								<strong>My Solutions</strong>
+								<strong>Solutions</strong>
 							</ListItem>
 							<ListItem>
 								<Text maxWidth="sm">
@@ -104,7 +109,7 @@ const Portfolio: React.FunctionComponent = () => {
 					justifyContent="center"
 				>
 					<ProjectCard
-						srcLink="https://www.youtube.com/embed/C7_uNyuBLs8"
+						srcLink="https://www.youtube.com/embed/C7_uNyuBLs8??rel=0;controls=0;showinfo=0"
 						title="Haiku Twitter"
 						description="Twitter clone except users are only allowed to tweet haikus"
 						tech={['Ruby on Rails', 'React', 'Postgresql']}
@@ -114,7 +119,7 @@ const Portfolio: React.FunctionComponent = () => {
 						<List spacing={3}>
 							<ListItem as="h2">
 								<ListIcon as={WarningTwoIcon} color="red.500" />
-								<strong>Problems I Encountered</strong>
+								<strong>Challenges Encountered</strong>
 							</ListItem>
 							<ListItem>
 								<Text maxWidth="sm">
@@ -128,7 +133,7 @@ const Portfolio: React.FunctionComponent = () => {
 							</ListItem>
 							<ListItem as="h2">
 								<ListIcon as={CheckCircleIcon} color="green.500" />
-								<strong>My Solutions</strong>
+								<strong>Solutions</strong>
 							</ListItem>
 							<ListItem>
 								<Text maxWidth="sm">

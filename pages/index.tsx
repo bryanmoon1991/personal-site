@@ -9,8 +9,10 @@ import {
 	Spacer,
 	Stack,
 	Button,
+	Box,
+	Image,
 } from '@chakra-ui/react';
-import { EmailIcon, DownloadIcon } from '@chakra-ui/icons';
+import { EmailIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 
 import { IconsComponent } from '../components/IconsComponent';
 
@@ -20,7 +22,6 @@ const IndexPage: FunctionComponent = () => {
 	return (
 		<Layout title="Home - Bryan Moon">
 			<Stack
-				as="main"
 				spacing={8}
 				justifyContent="center"
 				alignItems="flex-start"
@@ -30,12 +31,27 @@ const IndexPage: FunctionComponent = () => {
 			>
 				<Flex
 					flexDirection="column"
-					justifyContent="flex-start"
+					justifyContent="center"
 					alignItems="flex-start"
-					maxWidth="1000px"
 				>
-					<Heading>Hello.</Heading>
-					<Heading mb={5}>I'm Bryan Moon 🧑‍💻</Heading>
+					<Flex justifyContent="center" align="center" mb={5}>
+						<Box
+							boxSize={[150, 190, 230]}
+							mr={10}
+							borderWidth="8px"
+							rounded="50%"
+							borderColor="grey.100"
+						>
+							<Image src="/bryan.jpg" alt="your latest hire" rounded="50%" />
+						</Box>
+						<Spacer />
+						<Box>
+							<Stack>
+								<Heading>Hello.</Heading>
+								<Heading>I'm Bryan Moon🧑‍💻</Heading>
+							</Stack>
+						</Box>
+					</Flex>
 					<Text color={colorSecondary[colorMode]} mb={10}>
 						I am a software engineer based in Queens, NY with experience across
 						the stack.
@@ -48,7 +64,7 @@ const IndexPage: FunctionComponent = () => {
 							href="mailto: bryanmoon1991@gmail.com"
 							leftIcon={<EmailIcon />}
 							mt={20}
-							colorScheme="teal"
+							colorScheme="messenger"
 							variant="solid"
 						>
 							Email Me!
@@ -58,10 +74,10 @@ const IndexPage: FunctionComponent = () => {
 							size="md"
 							as="a"
 							href="./bryan-moon-resume.pdf"
-							download
-							leftIcon={<DownloadIcon />}
+							target="_blank"
+							leftIcon={<ExternalLinkIcon />}
 							mt={20}
-							colorScheme="teal"
+							colorScheme="messenger"
 							variant="solid"
 						>
 							Resume
