@@ -17,6 +17,8 @@ import {
 	Canva,
 	Postman,
 	Html5,
+	Python,
+	Flask,
 } from '@styled-icons/simple-icons';
 import { useColorMode } from '@chakra-ui/react';
 
@@ -48,6 +50,28 @@ export const IconsComponent = () => {
 						size="30"
 						fill={colorMode === 'dark' ? 'white' : 'black'}
 					/>
+				</Tooltip>
+			</WrapItem>
+			<WrapItem>
+				<Tooltip
+					hasArrow
+					openDelay={1000}
+					label="Python"
+					bg="gray.300"
+					color="black"
+				>
+					<Python size="30" fill={colorMode === 'dark' ? 'white' : 'black'} />
+				</Tooltip>
+			</WrapItem>
+			<WrapItem>
+				<Tooltip
+					hasArrow
+					openDelay={1000}
+					label="Flask"
+					bg="gray.300"
+					color="black"
+				>
+					<Flask size="30" fill={colorMode === 'dark' ? 'white' : 'black'} />
 				</Tooltip>
 			</WrapItem>
 			<WrapItem>
