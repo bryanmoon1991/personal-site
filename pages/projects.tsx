@@ -54,7 +54,7 @@ const Portfolio: React.FunctionComponent = () => {
 							'Spotify API',
 						]}
 						gitLink="https://github.com/bryanmoon1991/playlister-frontend"
-						externalLink="google.com"
+						externalLink="https://playlister-frontend.herokuapp.com/"
 					/>
 					<Box justifySelf="center" p="3" m="8">
 						<List spacing={3}>
