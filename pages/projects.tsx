@@ -44,7 +44,7 @@ const Portfolio: React.FunctionComponent = () => {
 						srcLink="https://www.youtube.com/embed/50RBJrqYr2c?rel=0;controls=0;showinfo=0"
 						title="Perfect Playlist"
 						description="A web app that allows users some more control over how playlists are
-					generated and enables quick discovery of new music."
+					generated and enables quick discovery of new music. Note, this app is currently not mobile friendly and will only work with premium Spotify accounts, improvements will be made to it over time!."
 						tech={[
 							'Ruby on Rails',
 							'React',
@@ -66,10 +66,12 @@ const Portfolio: React.FunctionComponent = () => {
 								<Text maxWidth="sm">
 									&bull; Tokens provided to users expire every 30 minutes
 								</Text>
+								<br />
 								<Text maxWidth="sm">
 									&bull; Results from API calls that exceed a certain number are
 									sent with an endpoint for the 'next page' of results
 								</Text>
+								<br />
 								<Text maxWidth="sm">
 									&bull; The 'artist' field for compilation albums are labeled
 									as 'Various Artists' along with a corresponding id
