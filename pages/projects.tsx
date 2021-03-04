@@ -44,7 +44,7 @@ const Portfolio: React.FunctionComponent = () => {
 						srcLink="https://www.youtube.com/embed/50RBJrqYr2c?rel=0;controls=0;showinfo=0"
 						title="Perfect Playlist"
 						description="A web app that allows users some more control over how playlists are
-					generated and enables quick discovery of new music. Note, this app is currently not mobile friendly and will only work with premium Spotify accounts, improvements will be made to it over time!."
+					generated and enables quick discovery of new music. Note, this app is currently not mobile friendly and will only work with premium Spotify accounts, improvements will be made to it over time!"
 						tech={[
 							'Ruby on Rails',
 							'React',
@@ -87,6 +87,7 @@ const Portfolio: React.FunctionComponent = () => {
 									of my API requests so that if a call had failed, I could
 									refresh the token without disturbing the user's experience.
 								</Text>
+								<br />
 								<Text maxWidth="sm">
 									&bull; I set state with the initial results of the API call
 									and as the first few results would render, a function that
@@ -94,6 +95,7 @@ const Portfolio: React.FunctionComponent = () => {
 									continue to update the piece of state that held its preceding
 									data.
 								</Text>
+								<br />
 								<Text maxWidth="sm">
 									&bull; Compilations were one of my main edgecases I had to
 									test against. For these items, I had to scan each track and
@@ -128,6 +130,7 @@ const Portfolio: React.FunctionComponent = () => {
 									&bull; Efficiently serializing the data that gets sent to the
 									frontend
 								</Text>
+								<br />
 								<Text maxWidth="sm">
 									&bull; Creating an infinite scroll feature without paginated
 									responses from the backend API
@@ -150,6 +153,7 @@ const Portfolio: React.FunctionComponent = () => {
 									serialized and which pieces metadata was necessary for a view
 									to render.
 								</Text>
+								<br />
 								<Text maxWidth="sm">
 									&bull; While creating an infinite scroll feature was not
 									necessary for the app to work, I wanted to include it as a
